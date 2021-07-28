@@ -66,3 +66,9 @@ node_modules/
 .env
 
 .next
+
+# build directory
+build/
+
+# others
+package-lock.json

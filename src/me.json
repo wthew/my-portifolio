@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "Wellington de Ferreira Queiroz",
+    "email": "the.w.3107@gmail.com",
+    "github": "github.com/wthew",
+    "age": 18,
+    "birthday": "31/07/2002",
+    "maritalStatus": "single",
+    "heigth": 1.68,
+    "gender": "male"
+  },
+  "bio": [
+    "I'm a Programming student, with skills in front-end, mobile, and back-end development, already having done some clone of retro games, mobile apps, web pages like this, among several small personal projects, I've been building an personal assistent, which will soon be available for everyone to try",
+    "",
+    "I really like linux, python, machine learning, cli apps with lot colored letters like vim, top, cava, mpd.",
+    "",
+    "and thats that, for more about me, or contact:"
+  ]
+}
