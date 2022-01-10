@@ -67,5 +67,8 @@ node_modules/
 
 .next
 
+# build directory
+build
+
 # others
 package-lock.json
