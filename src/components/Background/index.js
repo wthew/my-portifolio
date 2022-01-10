@@ -10,6 +10,6 @@ const Container = styled.img`
   z-index: -1;
 `;
 
-export default () => {
+export default function Background () {
   return <Container src={Img} />
-};
+}

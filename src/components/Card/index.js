@@ -61,9 +61,9 @@ export const ButtonBar = (props) => (
 );
 
 const Card = (props) => {
-  const [isHidden, setIsHidden] = useState(false);
-  const [isMax, setIsMax] = useState(false);
-  const [isMin, setIsMin] = useState(false);
+  const [isHidden] = useState(false);
+  const [isMax] = useState(false);
+  const [isMin] = useState(false);
 
   return (
     <CardContainer isHidden={isHidden} isMax={isMax} isMin={isMin} {...props}>
