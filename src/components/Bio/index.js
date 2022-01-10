@@ -39,9 +39,9 @@ const BioCard = (props) => {
       <TextContainer>{props.children}</TextContainer>
 
       <LinksConttainer>
-        {/* <Link target="_blank" href="https://www.instagram.com/__the.w__/" timeAnimation={10 * Math.random()}>
+        <Link target="_blank" href="https://www.instagram.com/__the.w__/" timeAnimation={10 * Math.random()}>
           <FaInstagram />
-        </Link> */}
+        </Link>
         <Link target="_blank" href="https://github.com/wthew" timeAnimation={10 * Math.random()}>
           <FaGithub />
         </Link>
