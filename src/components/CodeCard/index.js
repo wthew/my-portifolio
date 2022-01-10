@@ -7,11 +7,16 @@ import json from 'highlight.js/lib/languages/json';
 import '../../dracula.css';
 
 import CardBase from '../Card';
+import Draggable from 'react-draggable';
 
 const Card = styled(CardBase)`
-  height: 200px;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  height: 160px;
   width: 400px;
   overflow: hidden;
+  z-index: 9;
 `;
 
 hljs.registerLanguage('json', json);
@@ -30,7 +35,9 @@ const CodeCard = props => {
 
   const typing = useCallback(async textToType => {
     for (let character of textToType) {
-      setText(oldText => oldText + character);
+      setText(oldText =>
+        oldText !== textToType ? oldText + character : oldText
+      );
       await sleep(typeInterval());
     }
   }, []);
@@ -41,19 +48,20 @@ const CodeCard = props => {
 
   useEffect(() => hljs.highlightAll(), [text]);
 
-
   function typeInterval() {
     const randomMs = 100 * Math.random();
     return randomMs < 50 ? 10 : randomMs;
   }
 
   return (
-    <Card title={props.title}>
-      <pre>
-        <code>{text}</code>
-        <BlinkingCursor>_</BlinkingCursor>
-      </pre>
-    </Card>
+    <Draggable>
+      <Card title={props.title}>
+        <pre>
+          <code>{text}</code>
+          <BlinkingCursor>_</BlinkingCursor>
+        </pre>
+      </Card>
+    </Draggable>
   );
 };
 
