@@ -12,7 +12,7 @@ const CustomCard = styled(CardContainer)`
   margin-bottom: 5rem;
 `;
 
-export default () => (
+const WorksPanel = () => (
   <CustomCard>
     <ButtonBar title="some works" />
 
@@ -29,3 +29,5 @@ export default () => (
     </div>
   </CustomCard>
 );
+
+export default WorksPanel
