@@ -7,7 +7,6 @@ import Background from "./components/Background";
 import CodeCard from "./components/CodeCard";
 import Chart from "./components/Chart";
 import WorksPanel from "./components/WorksPanel";
-import Bio from "./components/Bio";
 
 const App = () => {
   const jsonText = JSON.stringify(info, undefined, 3);
@@ -20,11 +19,8 @@ const App = () => {
         <div className="main toEnd">
           <CodeCard title="info">{jsonText}</CodeCard>
         </div>
-        <div className="main toStart">
-          <Bio>{BioText}</Bio>
-        </div>
         <div className="main">
-          <Chart />
+          <Chart bio={BioText} />
         </div>
         <div className="main">
           <WorksPanel />
